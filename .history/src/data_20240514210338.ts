@@ -21,10 +21,10 @@ export const series = [
   ];
 
   function generateTable(series: Serie[]): string {
-    let tableHTML = '<table class="table table-striped">';
-    tableHTML += '<thead><tr><th>ID</th><th>Title</th><th>Network</th><th>Seasons</th><th>Synopsis</th><th>Webpage URL</th><th>Image</th></tr></thead>';
-    tableHTML += '<tbody>';
+    let tableHTML = '<table border="1">';
+    tableHTML += '<tr><th>ID</th><th>Title</th><th>Network</th><th>Seasons</th><th>Synopsis</th><th>Webpage URL</th><th>Image URL</th></tr>';
 
+    // Loop through series array to generate table rows
     series.forEach(serie => {
         tableHTML += '<tr>';
         tableHTML += `<td>${serie.id}</td>`;
@@ -33,15 +33,16 @@ export const series = [
         tableHTML += `<td>${serie.seasons}</td>`;
         tableHTML += `<td>${serie.summary}</td>`;
         tableHTML += `<td><a href="${serie.link}" target="_blank">Link</a></td>`;
-        tableHTML += `<td><img src="${serie.img}" alt="${serie.title}" style="max-width: 100px;"></td>`; // Adjust the image size if needed
+        tableHTML += `<td><img src="${serie.img}" alt="${serie.title}"></td>`;
         tableHTML += '</tr>';
     });
 
-    tableHTML += '</tbody></table>';
+    tableHTML += '</table>';
     return tableHTML;
 }
 
-const tableContainer = document.getElementById('series');
+// Display the table
+const tableContainer = document.getElementById('table-container');
 if (tableContainer) {
     tableContainer.innerHTML = generateTable(series);
 }

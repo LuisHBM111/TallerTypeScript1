@@ -19,4 +19,4 @@
         header:'Season',
     }
     return <div className="text-right font-medium">{formatted}</div>
-]*/
+]

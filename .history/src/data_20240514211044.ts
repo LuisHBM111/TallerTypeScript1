@@ -41,7 +41,7 @@ export const series = [
     return tableHTML;
 }
 
-const tableContainer = document.getElementById('series');
+const tableContainer = document.getElementById('table-container');
 if (tableContainer) {
     tableContainer.innerHTML = generateTable(series);
 }

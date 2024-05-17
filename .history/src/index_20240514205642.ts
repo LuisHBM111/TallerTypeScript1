@@ -1,7 +1,7 @@
-//import { Serie } from "./serie.js";
+import { Serie } from "./serie.js";
 //import { data } from "./data.js";
 
-/*export const columns: ComlumDef<Serie>[] = [
+export const columns(series:Serie[]):void [
     {
         accessorKey:'id',
         header:'Id',
@@ -18,5 +18,5 @@
         accessorKey:'seasons',
         header:'Season',
     }
-    return <div className="text-right font-medium">{formatted}</div>
-]*/
+]
+

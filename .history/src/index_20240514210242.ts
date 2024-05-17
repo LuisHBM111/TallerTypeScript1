@@ -1,7 +1,7 @@
 //import { Serie } from "./serie.js";
 //import { data } from "./data.js";
 
-/*export const columns: ComlumDef<Serie>[] = [
+/export const columns: ComlumDef<Serie>[] = [
     {
         accessorKey:'id',
         header:'Id',
@@ -19,4 +19,4 @@
         header:'Season',
     }
     return <div className="text-right font-medium">{formatted}</div>
-]*/
+]

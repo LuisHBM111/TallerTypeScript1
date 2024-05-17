@@ -29,11 +29,11 @@ export const series = [
         tableHTML += '<tr>';
         tableHTML += `<td>${serie.id}</td>`;
         tableHTML += `<td>${serie.title}</td>`;
-        tableHTML += `<td>${serie.channel}</td>`;
+        tableHTML += `<td>${serie.network}</td>`;
         tableHTML += `<td>${serie.seasons}</td>`;
-        tableHTML += `<td>${serie.summary}</td>`;
-        tableHTML += `<td><a href="${serie.link}" target="_blank">Link</a></td>`;
-        tableHTML += `<td><img src="${serie.img}" alt="${serie.title}" style="max-width: 100px;"></td>`; // Adjust the image size if needed
+        tableHTML += `<td>${serie.synopsis}</td>`;
+        tableHTML += `<td><a href="${serie.webpageUrl}" target="_blank">Link</a></td>`;
+        tableHTML += `<td><img src="${serie.imageUrl}" alt="${serie.title}" style="max-width: 100px;"></td>`; // Adjust the image size if needed
         tableHTML += '</tr>';
     });
 
@@ -41,7 +41,7 @@ export const series = [
     return tableHTML;
 }
 
-const tableContainer = document.getElementById('series');
+const tableContainer = document.getElementById('table-container');
 if (tableContainer) {
     tableContainer.innerHTML = generateTable(series);
 }
